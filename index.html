@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet_index.css">
+    <title>Hamanns, Emma 1990</title>
+
+    <script src="https://kit.fontawesome.com/a5ca7cf292.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<body>
+    <header>
+        <nav class="puff-in-center" >
+            <div>
+                <!--Vi har på nogle af vores billeder skaleret dem i html selvom dette ikke er optimalt. 
+                    Dette har vi gjort da billederne fra photoshop ellers blev vist i ekstremt dårlig kvalitet-->
+               <a href="index.html"> <img src="images/logo.stor.png" alt="logo" height="50px" width="auto"></a> 
+            </div>
+            <div class="navbar-left" >
+                <div class="dropdown">
+                    <button class="dropbtn">Menu & takeaway</button>
+
+                    <div class="dropdown-content">
+                      <a class="hover-underline-animation" href="menu.html">Morgenmad</a>
+                      <a class="hover-underline-animation" href="menu.html#frokost">Frokost</a>
+                      <a class="hover-underline-animation" href="menu.html#kage">Kage & drikke</a>
+                    </div>
+                </div> 
+
+                <a href="events.html">Events</a>
+
+                <a href="shop.html">Shop</a> 
+            </div>
+
+            <div class="navbar-right" >
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a id="book-button" href="#">Book Bord</a>
+            </div>
+
+            <div id="menuToggle">
+                <!--Vi laver en skjult checkbox og placerer ovenpå vores burgermenu-->
+                <input type="checkbox" />
+                
+                <!--Vi laver spans som vi laver til vores burger-->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <ul id="menu">
+                  <a class="hover-underline-animation-dark" href="menu.html"><li>Menu & takeaway</li></a>
+                  <a class="hover-underline-animation-dark" href="events.html"><li>Events</li></a> 
+                  <a class="hover-underline-animation-dark" href="shop.html"><li>Shop</li></a>
+                </ul>
+            </div>  
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <section class="forside-banner" >
+            <div id="forside-baggrund">
+            <img src="images/forside.baggrund.jpg" alt="Forside">
+            </div>
+
+            <div id="logo" >
+                <img src="images/logo.stor.png" alt="logo" height="300px" width="auto">
+            </div>
+
+            <div id="book-button-forside" >
+                <a href="#">
+                <h1>Book bord</h1>
+                </a>
+            </div>
+
+            
+            <div class="slideshow_sectionINDEX">
+                <div>
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide1.jpg" alt="slide1">
+                </div>
+                
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide2.jpg" alt="slide2">
+                </div>
+                
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide9.jpg" alt="slide3">
+                </div>
+                
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide4.jpg" alt="slide4">
+                </div>
+
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide5.jpg" alt="slide5">
+                </div>
+
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide6.jpg" alt="slide6">
+                </div>
+                
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide7.jpg" alt="slide7">
+                </div>
+
+                <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
+                    <img src="images/slide8.jpg" alt="slide8">
+                </div>
+            </div>
+            
+            <div>
+                <script>
+                var slideIndex = 0;
+                carousel();
+                
+                function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex > x.length) {slideIndex = 1} 
+                x[slideIndex-1].style.display = "block"; 
+                setTimeout(carousel, 5000); 
+                }
+                </script>
+            </div>
+        </div>
+        </section>
+
+
+
+
+
+        <section class="cardsection">
+            <div><img src="images/om.os.jpg" alt="om os"></div>
+            <div>
+                <h1>Om os</h1>
+                <p>
+                    Gennem 30 somre har jeg forelsket mig i alverdens smage. Noget af maden er fra min barndom og tilberedt som min bedstemor gjorde det, andet er fra mit voksne liv. 
+                    Fælles for alle retterne er, at det er smage, jeg ikke kan undvære i mit liv.   
+                    Jeg er altid åben overfor at forelske mig i nye sammensætninger og kulinariske udformninger, så menukortet er naturligt organisk foranderligt.
+                    Jeg glæder mig til at byde jer velkommen.
+                </p>
+            </div>
+        </section>
+  
+  
+        
+
+
+        <section class="cardscontainer">
+            <div>
+                <img src="images/morgenmad.png" alt="morgenmad">
+                <h2>Morgenmad</h2>
+                <h5>Alle dage: 09:00 - 17:00</h5>
+                <p>Prøv vores morgenmad med små fine detaljer, nye smage og smagskombinationer og en anretning som skiller sig ud fra mængden.</p>
+                <a href="menu.html">Se menukortet</a>
+            </div>
+            
+            <div>
+                <img src="images/frokost.png" alt="frokost">
+                <h2>Frokost</h2>
+                <h5>Alle dage: 09:00 - 17:00</h5>
+                <p>Vores frokostkort er enkelt og simpelt - dog uden at gå på kompromis med nye og spændende anretninger.</p>
+                <a href="menu.html#frokost">Se menukortet</a>
+            </div>
+            
+            <div>
+                <img src="images/kage.png" alt="kage og drikke">
+                <h2>Kage & drikke</h2>
+                <h5>Alle dage: 09:00 - 17:00</h5>
+                <p>I cafén'en har vi altid friskbagte kager, som løbende bliver skiftet ud alt efter sæson og nye ideer.</p>
+                <a href="menu#kage">Se menukortet</a>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="instagram" >
+            <section class="instagram_et">
+                <div class="insta_et">
+                    <img src="images/instagram1.jpg" alt="test">
+                </div>
+
+                <div class="insta_to">
+                    <img src="images/instagram2.jpg" alt="test">
+                </div>
+
+                <div class="insta_tre">
+                    <img src="images/instagram3.jpg" alt="test">
+                </div>
+            </section>
+
+            <section class="instagram_to">
+                <div class="insta_fire">
+                    <img src="images/instagram4.jpg" alt="test">
+                </div>
+
+                <div class="insta_fem">
+                    <img src="images/instagram5.jpg" alt="test">
+                </div>
+                
+                <div class="insta_seks">
+                    <img src="images/instagram6.jpg" alt="test">
+                </div>
+            </section>
+
+            <section class="instagram_tre">
+                <div class="nyhed_fire">
+                    <img src="images/instagram7.jpg" alt="test">
+                </div>
+
+                <div class="nyhed_fem">
+                    <img src="images/instagram8.jpg" alt="test">
+                </div>
+
+                <div class="nyhed_seks">
+                    <img src="images/instagram9.jpg" alt="test">
+                </div>
+            </section>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer">
+                <div id="column-one" >
+                    <h1>Kontakt</h1>
+                    <p>Gammel Munkegade 5 st.</p>
+                    <p>8000 Aarhus C</p>
+                    <br>
+                    <p>Åbningstider</p>
+                    <p>Mandag-fredag: 09:00-18:00</p>
+                    <p>Lørdag: 09:30-18:00</p>
+                    <p>Søndag: 09:30-18:00</p>
+                    <br>
+                    <p>Mail: emma@hamanns1990.dk</p>
+                    <p>Tlf.: 93 99 07 55</p>
+                </div>
+
+                <div id="column-two">
+                    <h1>Tilmeld dig vores nyhedsbrev</h1>
+                    <form>
+                        <input type="email" placeholder="Din e-mail" required>
+                        <br>
+                        <button type="submit">Tilmeld</button>
+                    </form>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/emmaemma.dk/?next=%2Femma.emma.80%2F" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/hamannsemma1990/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div id="column-three" >
+                    <h1>Info</h1>
+                    <a class="hover-underline-animation" href="#">Smileyrapport</a>
+                    <a class="hover-underline-animation" href="#">Handelsbetingelser</a>
+                    <a class="hover-underline-animation" href="#">Leveringsinformation</a>
+                    <a class="hover-underline-animation" href="#">Ombytning og returnering</a>
+                    <a class="hover-underline-animation" href="#">Servicevilkår</a>
+                    <a class="hover-underline-animation" href="#">Refusionspolitik</a>
+                    <a class="hover-underline-animation" href="#">Job</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

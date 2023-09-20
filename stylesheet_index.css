@@ -1,0 +1,886 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/*----NAVIGATIONSBAR----*/
+nav{
+  width: 100%;
+  padding-top: 25px;
+  position: fixed;
+  z-index: 1;
+}
+
+nav img{
+  margin-left: 20px;
+  margin-right: 20px;
+  display: block;
+  float: left;
+}
+
+nav div a{
+  display: block;
+  float: left;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav div i{
+  color: white;
+  margin-right: 25px;
+}
+
+.navbar-left{
+  margin-top: 16px;
+}
+
+.navbar-left a{
+margin-left: 30px;
+}
+
+.navbar-right{
+  float: right;
+}
+
+#nav-mobile i{
+  text-align: end;
+  font-size: 40px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+/*----DROPDOWN I NAV----*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: inherit;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 0;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin-left: -1px;
+  margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----BOOK BORD KNAP I NAV----*/
+#book-button{
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 3px 8px 3px 8px;
+  transition: all .2s ease-in-out;
+  margin-right: 20px;
+}
+
+#book-button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/*----BURGER MENU I MOBILE VERSION----*/
+#menuToggle{
+  display: block;
+  position: relative;
+  float: right;
+  z-index: 1;
+}
+
+/*----TEKSTEN INDE I MENUEN----*/
+#menuToggle a{
+  text-decoration: none;
+  color: #464a38;
+  transition: color 0.3s ease;
+}
+
+/*----CHECKBOXEN OVENPÅ BURGERMENUEN----*/
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /*---- Her skjuler vi vores button----*/
+  z-index: 2; /*----og placer den ovenpå vores burger----*/
+}
+
+/*----BURGEREN----*/
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+
+  margin-right: 40px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #eeeee1;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: 
+    transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/*----Vi laver burgeren om til et kryds----*/
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #464a38;
+}
+
+/*----Vi skjuler stregen i midten----*/
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*----Sidste streg skal rotere modsat vej----*/
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu{
+  position: absolute;
+  width: 300px;
+  height: 700px;
+  margin: -100px 0 0 -200px;
+  padding-top: 125px;
+  padding-right: 120px;
+  
+  background: #eeeee1;
+  list-style-type: none;
+ 
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+
+/*----Så den slider ind fra højre----*/
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----FORSIDE BANNER----*/
+.forside-banner{
+  width: 100%;
+  display: flex;
+  
+}
+
+/*----LOGO PÅ FORSIDEN----*/
+#logo{
+  position: absolute;
+  top: 150px;
+  left: 12%;
+}
+
+
+
+/*----SLIDESHOW I FORSIDEBANNER----*/
+.slideshow_sectionINDEX{
+  height: 800px;
+  display: flex;
+  width: 50%;
+  overflow: hidden;
+}
+
+.slideshow_sectionINDEX img{
+  display: flex; 
+}
+
+
+
+
+
+/*----BOOK BORD KNAP PÅ FORSIDE----*/
+#book-button-forside a{
+  position: absolute;
+  top: 530px;
+  left: 17%;
+
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  border-bottom: 1px white solid;
+  
+  transition: all .2s ease-in-out;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#book-button-forside :hover{
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----BAGGRUNDSFARVE----*/
+main{
+  background-color: #eeeee1;
+}
+
+
+
+
+
+
+
+
+
+
+/*----OM OS SEKTIONEN----*/
+.cardsection{
+  display:flex;
+  justify-content:space-around;
+  height: 330px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.cardsection img{
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.cardsection div{
+  width:100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #464a38;
+}
+
+/*----TEKST UNDER OM OS----*/
+.cardsection h1{
+  font-size: 40px;
+}
+
+.cardsection p{
+  text-align: left;
+  padding-top: 25px;
+  padding-right: 20px;
+  font-size: 22px;
+  line-height: 36px;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+/*----MENU KORT----*/
+.cardscontainer{
+  display:flex;
+  justify-content:space-around;
+  width:100%;
+  height: 600px;
+  margin-bottom: 100px;
+}
+
+.cardscontainer div{
+  width:30%;
+  position: relative;
+  border-radius:20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  background-color: #c49a95;
+}
+
+/*----BILLEDE I MENUKORT----*/
+.cardscontainer img{
+margin-top: 40px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+/*----TEKST I MENUKORT---*/
+.cardscontainer div h2{
+  color: white;
+  font-size: 35px;
+}
+
+.cardscontainer div h5{
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.cardscontainer p{
+  color: white;
+  padding: 20px 40px 0px 40px;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-size: 18px;
+}
+
+/*----"Se menukort" KNAP----*/
+/*----Vi har haft en del problemer med denne knap. Vores transition og scale ville nemlig kun fungere hvis vi havde position: absolute.
+Men når vi har position: absolute har det ikke være muligt for os at centrere knappen når vi gjorde den responsiv.
+På shop.html kan knappen ses uden transform og position: absolut, hvorved det er er responsivt.
+Har du mon et bud på hvorfor dette kan være?----*/
+.cardscontainer a{
+  color: white;
+  background-color: #856e6b;
+  padding: 8px 15px 8px 15px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+  transition: all .2s ease-in-out;
+}
+
+.cardscontainer div:nth-child(2){
+  background-color: #856e6b;
+}
+
+.cardscontainer div:nth-child(2) a{
+  background-color: #c49a95;
+}
+
+.cardscontainer a:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+/*----INSTAGRAM BILLEDEGALLERI----*/
+.instagram{
+  margin: 0px 20px 100px 20px;
+}
+
+.instagram_et, .instagram_to, .instagram_tre{
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.instagram div{
+  width: 410px;
+  height: 330px;
+  margin: 10px;
+  background-color: #eeeee1;
+  position: relative;
+} 
+
+/*----INSTAGRAM BILLEDERÆKKE 1----*/
+.instagram_et > div:first-child{
+  margin-right: 100px;
+}
+
+/*----INSTAGRAM BILLEDERÆKKE 2----*/
+.instagram_to > div{
+  background-color: #eeeee1;
+  position: relative;
+}
+
+.instagram_to > div:nth-child(2){
+  margin-right: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----FOOTER----*/
+/*--Vi har givet vores footer en klasse selvom dette ikke er nødvendigt da vi bare kunne bruge child select.
+Men af en eller anden årsag opførte footeren sig underligt når vi gjorde dette. Derfor gav vi den en klasse--*/
+.footer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(146,150,129);
+  padding: 30px;
+  bottom: 0;
+}
+
+/*----FOOTER TEXT----*/
+.footer p{
+  line-height: 26px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer h1{
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer a{
+  display: block;
+  color: white;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 10px;
+}
+
+/*----NYHEDSBREV----*/
+/*----Vi får kolonnen i midten til at centrere teksten----*/
+#column-two{
+  text-align: center;
+  
+}
+
+form input{
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  margin-bottom: 40px;
+  text-align: left;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*----TILMELDNINGSKNAP----*/
+form button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 6px 17px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  transition: all .2s ease-in-out;
+}
+
+form button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/*----SOCIALE MEDIER IKONER----*/
+.social-icons{
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+  
+.social-icons i{
+  font-size: 30px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.social-icons i:hover{
+  transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+/*----ANIMATIONER & TRANSITIONS----*/
+/*----NAV ANIMATION----*/
+.puff-in-center {
+	animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@keyframes puff-in-center {
+  0% {
+    transform: scale(1);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+/*----DROPDOWN ANIMATION----*/
+.tracking-in-expand{
+animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*----UNDERLINE ANIMATION LYS----*/
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*----UNDERLINE ANIMATION MØRK----*/
+.hover-underline-animation-dark {
+  display: inline-block;
+  position: relative;
+  color: white
+}
+
+.hover-underline-animation-dark:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #464a38;
+  transform-origin: bottom right;
+  transition: transform 0.50s ease-out;
+}
+  
+.hover-underline-animation-dark:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*----BOOK BORD ANIMATION----*/
+ @keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.7em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*----RESPONSIVE----*/
+/*----LAPTOP----*/
+@media screen and (min-width: 1090px){
+  #menuToggle span{
+    display: none !important; 
+  }
+  
+  #menu{
+    display: none !important;
+  }
+
+  .instagram_app{
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+/*----MOBIL----*/
+@media screen and (max-width:1090px){
+  
+
+/*----HEADER----*/
+header{
+  justify-content:space-between ;}
+
+.navbar-left, .navbar-right{
+  display: none;}
+
+#book-button-forside a{
+  text-align: center;}
+  
+.forside-banner{
+  flex-direction: column;
+}
+
+
+
+#forside-baggrund img{
+  width: 100%;
+  height: 700px;
+}
+
+.slideshow_sectionINDEX{
+  width: 100%;
+  height: 900px;
+  margin-top: -4px;
+  background-color: #929681;
+  justify-content: center;
+}
+
+.slideshow_sectionINDEX img{
+  width: 100%;
+}
+
+/*----OM OS SECTION----*/
+.cardsection img{
+
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 80%;
+  }
+  
+.cardsection{
+  flex-direction: column;
+  margin-top: 50px;
+  height: auto;
+  margin-bottom: 10%;
+
+}
+  
+.cardsection p{
+  
+  text-align: center;
+  width: auto;
+  margin-left: 7%;
+  margin-right: 7%;
+  
+}
+  
+.cardsection h1{
+  text-align: center;
+}
+  
+.cardscontainer{
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/*----MENU KORT----*/
+.cardsection h1{
+  text-align: center;
+}
+  
+.cardscontainer{
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+
+}
+
+.cardscontainer div{
+  width: auto;
+  height: 600px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.cardscontainer div a{
+  margin-left: 8%;
+
+
+}
+
+
+
+
+
+/*----INSTAGRAM----*/
+
+.instagram_et{
+  flex-wrap: wrap;
+}
+
+.instagram_et div:first-child{
+  display: none;
+}
+
+.instagram_to{
+  flex-wrap: wrap;
+}
+
+.instagram_to div:nth-child(2){
+  display: none;
+}
+
+.instagram_tre{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/*----FOOTER----*/
+.footer{
+  flex-direction: column;
+}
+
+.footer :nth-child(1){order: 2;}
+.footer :nth-child(2){order: 1;}
+.footer :nth-child(3){order: 3;}
+
+#column-two{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#column-one{
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#column-three{
+  text-align: center;
+}
+}

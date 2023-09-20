@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /kurv/
+Disallow: /ordre/
+Disallow: /checkouts/
+
+# Google adsbot ignorerer robots.txt hvis den ikke er specifikt navngivet!
+User-agent: adsbot-google
+Disallow: /kurv/
+Disallow: /ordre/
+Disallow: /checkouts/
