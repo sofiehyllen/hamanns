@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/a5ca7cf292.js" crossorigin="anonymous"></script>
 
     <link rel="Stylesheet" href="stylesheet_events.css">
+    <link rel="stylesheet" href="stylesheet_index.cs">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -28,8 +30,7 @@
             </div>
             <div class="navbar-left" >
                 <div class="dropdown">
-                    <button class="dropbtn">Menu & takeaway</button>
-
+                    <button class="dropbtn" onclick="window.location='menu.html';">Menu & takeaway</button>
                     <div class="dropdown-content">
                       <a class="hover-underline-animation-dark" href="menu.html">Morgenmad</a>
                       <a class="hover-underline-animation-dark" href="menu.html#frokost">Frokost</a>
@@ -73,7 +74,7 @@
 
 
 
-    <section class="cardsection">
+    <section class="nyhedsection">
         <div><img src="images/nyhed2.png" alt="morgenmad"></div>
         <div>
             <h1>Nyhed</h1>
@@ -91,89 +92,88 @@
 
 
 
-
-
-
-
-
-
-    <section class="cardscontainer">
-        <div>
-            <img src="images/tredjeevent.png" alt="morgenmad">
-            <h2> Garn & Græskar </h2>
-            <p>Torsdag d. 13.10.2022 <br>
-            kl. 17:00 - 21:00</p>
-            <a href="#">Læs mere</a>
+    <section class="cardsection">
+        <div class="cardscontainer" >
+            <img src="images/tredjeevent.png" alt="Græskar event">
+            <div class="cardscontainer-eventtitle">
+                <h2>Garn og Græskar</h2>
+            </div>
+            <div class="cardscontainer-eventtext">
+                <p>Torsdag d. 13.10.2022 <br>
+                    kl. 17:00 - 21:00</p>
+            </div>
+            <div class="cardscontainer-cta">
+                <a href="#">Læs mere</a>
+            </div>
         </div>
-
-        <div>
-            <img src="images/andetevent.png" alt="frokost">
-            <h2>Hamann fejrer 2 års fødselsdag</h2>
-            <p>Mandag d. 19.08.2022 <br>
-            kl. 09:00 - 20:00</p>
-            <a href="#">Læs mere</a>
+        
+        <div class="cardscontainer" id="middle-card">
+            <img src="images/andetevent.png" alt="Fødselsdags event">
+            <div class="cardscontainer-eventtitle">
+                <h2>Hamann fejrer 2 års fødselsdag</h2>
+            </div>
+            <div class="cardscontainer-eventtext">
+                <p>Mandag d. 19.08.2022 <br>
+                    kl. 09:00 - 20:00</p>
+            </div>
+            <div class="cardscontainer-cta">                
+                <a href="#">Læs mere</a>
+            </div>
         </div>
-
-        <div>
-            <img src="images/førsteevent.png" alt="kage og drikke">
-            <h2>Strik & drik</h2>
-            <p>Lørdag d. 15.10.2022 <br>
-            kl. 16:00 - 21:00</p>
-            <a href="#">Læs mere</a>
+        
+        <div class="cardscontainer" >
+            <img src="images/førsteevent.png" alt="Strikke event">
+            <div class="cardscontainer-eventtitle">
+                <h2>Strik & drik</h2>
+            </div>
+            <div class="cardscontainer-eventtext">
+                <p>Lørdag d. 15.10.2022 <br>
+                    kl. 16:00 - 21:00</p>
+            </div>
+            <div class="cardscontainer-cta">
+                <a href="#">Læs mere</a>
+            </div>
         </div>
     </section>
 
 
 
-
-
-
-
-
-
-
     <section class="instagram" >
-            <section class="instagram_et">
-                <div class="insta_et">
-                    <img src="images/instagram1.jpg" alt="test">
-                </div>
+        <section class="instagram-row">
+            <div>
+                <img src="images/instagram1.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram2.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram3.jpg" alt="test">
+            </div>
+        </section>
 
-                <div class="insta_to">
-                    <img src="images/instagram2.jpg" alt="test">
-                </div>
+        <section class="instagram-row" id="instagram-second-row">
+            <div>
+                <img src="images/instagram4.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram5.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram6.jpg" alt="test">
+            </div>
+        </section>
 
-                <div class="insta_tre">
-                    <img src="images/instagram3.jpg" alt="test">
-                </div>
-            </section>
-
-            <section class="instagram_to">
-                <div class="insta_fire">
-                    <img src="images/instagram4.jpg" alt="test">
-                </div>
-
-                <div class="insta_fem">
-                    <img src="images/instagram5.jpg" alt="test">
-                </div>
-                
-                <div class="insta_seks">
-                    <img src="images/instagram6.jpg" alt="test">
-                </div>
-            </section>
-
-            <section class="instagram_tre">
-                <div class="nyhed_fire">
-                    <img src="images/instagram7.jpg" alt="test">
-                </div>
-
-                <div class="nyhed_fem">
-                    <img src="images/instagram8.jpg" alt="test">
-                </div>
-
-                <div class="nyhed_seks">
-                    <img src="images/instagram9.jpg" alt="test">
-                </div>
-            </section>
+        <section class="instagram-row">
+            <div>
+                <img src="images/instagram7.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram8.jpg" alt="test">
+            </div>
+            <div>
+                <img src="images/instagram9.jpg" alt="test">
+            </div>
+        </section>
     </section>
 
 

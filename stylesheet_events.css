@@ -265,7 +265,7 @@ header{
 
 
 /*------NYHED------*/
-.cardsection{
+.nyhedsection{
   display:flex;
   justify-content:space-around;
   width:90%;
@@ -274,7 +274,7 @@ header{
   color: #464a38;
 }
 
-.cardsection div{
+.nyhedsection div{
   width:50%;
   padding-bottom:5px;
   border-radius:20px;
@@ -284,13 +284,13 @@ header{
 }
 
 /*------TEKST I NYHED------*/
-.cardsection h1{
+.nyhedsection h1{
   font-size: 40px;
   text-align: left;
   padding-bottom: 5px;
 }
 
-.cardsection p{
+.nyhedsection p{
   text-align: left;
   line-height: 30px;
   margin-top: 20px;
@@ -312,71 +312,77 @@ hr{
 
 
 
-/*----CARDSCONTAINER EVENTS----*/
-.cardscontainer{
-  display:flex;
-  justify-content:space-around;
-  width:100%;
-  margin-top: 50px;
-  margin-bottom: 110px;
-  height: 650px;
+/*----MENU KORT----*/
+.cardsection{
+    display:flex;
+    width: 100%;
+    padding: 0 6% 10% 6%;
+    justify-content: center;
 }
 
-.cardscontainer div{
-  width:30%;
-  border-radius:20px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif;
-  text-align:center;
+.cardscontainer{ 
+    width: 28%;
+    margin: 2%;
+    padding-top: 3%;
+    border-radius:20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    background-color: #c49a95;
+    color: white;
 }
 
-/*----TEKST I CARDSCONTAINER EVENTS----*/
-.cardscontainer div h2{
-  font-size: 32px;
-  color: white;
-  padding-left: 63px;
-  padding-right: 63px;
-  padding-bottom: 20px;
+/*----TEKST I MENUKORT---*/
+.cardscontainer h2{
+    font-size: 35px;
+    padding-top: 5%;
 }
 
-.cardscontainer div p{
-  font-size: 20px;
-  color: white;
-  padding-bottom: 20px;
-  font-family: 'Zen Kurenaido', sans-serif;
+.cardscontainer h5{
+    font-size: 20px;
+    padding-top: 10px;
 }
 
-.cardscontainer div:first-child, .cardscontainer div:last-child{
-  background-color: #c49a95;
+.cardscontainer-eventtitle{
+    height: 100px;
 }
 
-.cardscontainer div:nth-child(2){
-  background-color: #856e6b;
+.cardscontainer-eventtext{
+    padding-bottom: 15%;
+    padding-top: 7%;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 140%;
 }
 
-.cardscontainer img{
-  margin-top: 40px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.cardscontainer-text{
+    padding: 30px 50px 0 50px;
+    height: 200px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;  
 }
 
-/*----BUTTON I CARDSCONTAINER EVENTS----*/
+/*----"Se menukort" KNAP----*/
 .cardscontainer a{
-  color: white;
-  background-color: #856e6b;
-  padding: 8px 15px 8px 15px;
-  border-radius: 20px;
-  position: absolute;
-  bottom: 30px;
-  left: 140px;
-  transition: all .2s ease-in-out;
+    color: white;
+    padding: 8px 15px 8px 15px;
+    background-color: #856e6b;
+    border-radius: 20px;
 }
 
-.cardscontainer div:nth-child(2) a{
-  background-color: #c49a95;
+.cardscontainer-cta{
+    margin-bottom: 20%;
+    transition: all .2s ease-in-out;
 }
-.cardscontainer a:hover{
-  transform: scale(1.2);
+
+#middle-card{
+    background-color: #856e6b;
+}
+
+#middle-card a{
+    background-color: #c49a95;
+}
+
+.cardscontainer-cta:hover{
+    transform: scale(1.2);
 }
 
 
@@ -391,37 +397,19 @@ hr{
 
 /*----INSTAGRAM BILLEDEGALLERI----*/
 .instagram{
-  margin: 0px 20px 100px 20px;
+  margin: 0 10% 10% 10%;
 }
 
-.instagram_et, .instagram_to, .instagram_tre{
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
+.instagram-row{
+    display: flex;
+    justify-content: space-between;
 }
 
-.instagram div{
-  width: 410px;
-  height: 330px;
-  margin: 10px;
-  background-color: #eeeee1;
-  position: relative;
-} 
-
-/*----INSTAGRAM BILLEDERÆKKE 1----*/
-.instagram_et > div:first-child{
-  margin-right: 100px;
+#instagram-second-row{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-/*----INSTAGRAM BILLEDERÆKKE 2----*/
-.instagram_to > div{
-  background-color: #eeeee1;
-  position: relative;
-}
-
-.instagram_to > div:nth-child(2){
-  margin-right: 100px;
-}
 
 
 

@@ -31,7 +31,7 @@
             </div>
             <div class="navbar-left" >
                 <div class="dropdown">
-                    <button class="dropbtn">Menu & takeaway</button>
+                    <button class="dropbtn" onclick="window.location='menu.html';">Menu & takeaway</button>
 
                     <div class="dropdown-content">
                       <a class="hover-underline-animation" href="menu.html">Morgenmad</a>
@@ -68,31 +68,19 @@
         </nav>
     </header>
 
-
-
-
-
-
-
-
-
-
     <main>
         <section class="forside-banner" >
-            <div id="forside-baggrund">
-            <img src="images/forside.baggrund.jpg" alt="Forside">
-            </div>
+            <div id="forside-left">
+                <div id="logo" >
+                    <img src="images/logo.stor.png" alt="logo" height="300px" width="auto">
+                </div>
 
-            <div id="logo" >
-                <img src="images/logo.stor.png" alt="logo" height="300px" width="auto">
+                <div id="book-button-forside" >
+                    <a href="#">
+                    <h1>Book bord</h1>
+                    </a>
+                </div>                    
             </div>
-
-            <div id="book-button-forside" >
-                <a href="#">
-                <h1>Book bord</h1>
-                </a>
-            </div>
-
             
             <div class="slideshow_sectionINDEX">
                 <div>
@@ -127,34 +115,30 @@
                 <div class="mySlides w3-container w3-xlarge w3-white w3-card-4">
                     <img src="images/slide8.jpg" alt="slide8">
                 </div>
-            </div>
+                </div>
             
-            <div>
-                <script>
-                var slideIndex = 0;
-                carousel();
-                
-                function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none"; 
-                }
-                slideIndex++;
-                if (slideIndex > x.length) {slideIndex = 1} 
-                x[slideIndex-1].style.display = "block"; 
-                setTimeout(carousel, 5000); 
-                }
-                </script>
+                <div>
+                    <script>
+                    var slideIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none"; 
+                    }
+                    slideIndex++;
+                    if (slideIndex > x.length) {slideIndex = 1} 
+                    x[slideIndex-1].style.display = "block"; 
+                    setTimeout(carousel, 5000); 
+                    }
+                    </script>
+                </div>
             </div>
-        </div>
         </section>
 
-
-
-
-
-        <section class="cardsection">
+        <section class="aboutsection">
             <div><img src="images/om.os.jpg" alt="om os"></div>
             <div>
                 <h1>Om os</h1>
@@ -167,93 +151,83 @@
             </div>
         </section>
   
-  
-        
-
-
-        <section class="cardscontainer">
-            <div>
+        <section class="cardsection">
+            <div class="cardscontainer" >
                 <img src="images/morgenmad.png" alt="morgenmad">
                 <h2>Morgenmad</h2>
                 <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>Prøv vores morgenmad med små fine detaljer, nye smage og smagskombinationer og en anretning som skiller sig ud fra mængden.</p>
-                <a href="menu.html">Se menukortet</a>
+                <div class="cardscontainer-text">
+                    <p>Prøv vores morgenmad med små fine detaljer, nye smage og smagskombinationer og en anretning som skiller sig ud fra mængden.</p>
+                </div>
+                <div class="cardscontainer-cta">
+                    <a href="menu.html">Se menukortet</a>
+                </div>
+                
             </div>
             
-            <div>
+            <div class="cardscontainer" id="middle-card">
                 <img src="images/frokost.png" alt="frokost">
                 <h2>Frokost</h2>
                 <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>Vores frokostkort er enkelt og simpelt - dog uden at gå på kompromis med nye og spændende anretninger.</p>
-                <a href="menu.html#frokost">Se menukortet</a>
+                <div class="cardscontainer-text">
+                    <p>Vores frokostkort er enkelt og simpelt - dog uden at gå på kompromis med nye og spændende anretninger.</p>
+                </div>
+                <div class="cardscontainer-cta">                
+                    <a href="menu.html#frokost">Se menukortet</a>
+                </div>
             </div>
             
-            <div>
+            <div class="cardscontainer" >
                 <img src="images/kage.png" alt="kage og drikke">
                 <h2>Kage & drikke</h2>
                 <h5>Alle dage: 09:00 - 17:00</h5>
-                <p>I cafén'en har vi altid friskbagte kager, som løbende bliver skiftet ud alt efter sæson og nye ideer.</p>
-                <a href="menu#kage">Se menukortet</a>
+                <div class="cardscontainer-text">
+                    <p>I cafén'en har vi altid friskbagte kager, som løbende bliver skiftet ud alt efter sæson og nye ideer.</p>
+                </div>
+                <div class="cardscontainer-cta">
+                    <a href="menu.html#kage">Se menukortet</a>
+                </div>
             </div>
         </section>
 
-
-
-
-
         <section class="instagram" >
-            <section class="instagram_et">
-                <div class="insta_et">
+            <section class="instagram-row">
+                <div>
                     <img src="images/instagram1.jpg" alt="test">
                 </div>
-
-                <div class="insta_to">
+                <div>
                     <img src="images/instagram2.jpg" alt="test">
                 </div>
-
-                <div class="insta_tre">
+                <div>
                     <img src="images/instagram3.jpg" alt="test">
                 </div>
             </section>
 
-            <section class="instagram_to">
-                <div class="insta_fire">
+            <section class="instagram-row" id="instagram-second-row">
+                <div>
                     <img src="images/instagram4.jpg" alt="test">
                 </div>
-
-                <div class="insta_fem">
+                <div>
                     <img src="images/instagram5.jpg" alt="test">
                 </div>
-                
-                <div class="insta_seks">
+                <div>
                     <img src="images/instagram6.jpg" alt="test">
                 </div>
             </section>
 
-            <section class="instagram_tre">
-                <div class="nyhed_fire">
+            <section class="instagram-row">
+                <div>
                     <img src="images/instagram7.jpg" alt="test">
                 </div>
-
-                <div class="nyhed_fem">
+                <div>
                     <img src="images/instagram8.jpg" alt="test">
                 </div>
-
-                <div class="nyhed_seks">
+                <div>
                     <img src="images/instagram9.jpg" alt="test">
                 </div>
             </section>
         </section>
         
-
-
-
-
-
-
-
-
-
         <footer>
             <div class="footer">
                 <div id="column-one" >

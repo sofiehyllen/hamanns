@@ -254,45 +254,39 @@ margin-left: 30px;
 .forside-banner{
   width: 100%;
   display: flex;
-  
+  background-color: #464a38;
+}
+
+#forside-left{
+    background-color: #929681;
+    text-align: center;
+    flex: 1;
+}
+
+/*----SLIDESHOW I FORSIDEBANNER----*/
+.slideshow_sectionINDEX{
+    height: 800px;
+    width: 640px;
 }
 
 /*----LOGO PÅ FORSIDEN----*/
 #logo{
-  position: absolute;
-  top: 150px;
-  left: 12%;
+    margin-top: 15%;
+    margin-bottom: 5%;
 }
-
-
-
-/*----SLIDESHOW I FORSIDEBANNER----*/
-.slideshow_sectionINDEX{
-  height: 800px;
-  display: flex;
-  width: 50%;
-  overflow: hidden;
-}
-
-.slideshow_sectionINDEX img{
-  display: flex; 
-}
-
-
-
-
 
 /*----BOOK BORD KNAP PÅ FORSIDE----*/
-#book-button-forside a{
-  position: absolute;
-  top: 530px;
-  left: 17%;
+#book-button-forside{
+    width: fit-content;
+    border-bottom: white solid 2px;
+    margin: 0 auto;
+}
 
+#book-button-forside a{
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 25px;
-  border-bottom: 1px white solid;
-  
+
   transition: all .2s ease-in-out;
   animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -327,31 +321,30 @@ main{
 
 
 /*----OM OS SEKTIONEN----*/
-.cardsection{
-  display:flex;
-  justify-content:space-around;
-  height: 330px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.aboutsection{
+    display:flex;
+    justify-content:space-around;
+    height: 330px;
+    margin: 8%;
 }
 
-.cardsection img{
+.aboutsection img{
   padding-left: 25px;
   padding-top: 10px;
 }
 
-.cardsection div{
+.aboutsection div{
   width:100%;
   font-family: 'Montserrat', sans-serif;
   color: #464a38;
 }
 
 /*----TEKST UNDER OM OS----*/
-.cardsection h1{
+.aboutsection h1{
   font-size: 40px;
 }
 
-.cardsection p{
+.aboutsection p{
   text-align: left;
   padding-top: 25px;
   padding-right: 20px;
@@ -370,75 +363,65 @@ main{
 
 
 /*----MENU KORT----*/
-.cardscontainer{
-  display:flex;
-  justify-content:space-around;
-  width:100%;
-  height: 600px;
-  margin-bottom: 100px;
+.cardsection{
+    display:flex;
+    width: 100%;
+    padding: 0 6% 10% 6%;
+    justify-content: center;
 }
 
-.cardscontainer div{
-  width:30%;
-  position: relative;
-  border-radius:20px;
-  font-family: 'Montserrat', sans-serif;
-  text-align:center;
-  background-color: #c49a95;
-}
-
-/*----BILLEDE I MENUKORT----*/
-.cardscontainer img{
-margin-top: 40px;
-border-radius: 10px;
-margin-bottom: 20px;
+.cardscontainer{ 
+    width: 28%;
+    margin: 2%;
+    padding-top: 3%;
+    border-radius:20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    background-color: #c49a95;
+    color: white;
 }
 
 /*----TEKST I MENUKORT---*/
-.cardscontainer div h2{
-  color: white;
-  font-size: 35px;
+.cardscontainer h2{
+    font-size: 35px;
+    padding-top: 5%;
 }
 
-.cardscontainer div h5{
-  color: white;
-  font-size: 20px;
-  padding-top: 10px;
+.cardscontainer h5{
+    font-size: 20px;
+    padding-top: 10px;
 }
 
-.cardscontainer p{
-  color: white;
-  padding: 20px 40px 0px 40px;
-  font-family: 'Zen Kurenaido', sans-serif;
-  font-size: 18px;
+.cardscontainer-text{
+    padding: 30px 50px 0 50px;
+    height: 200px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;  
 }
 
 /*----"Se menukort" KNAP----*/
-/*----Vi har haft en del problemer med denne knap. Vores transition og scale ville nemlig kun fungere hvis vi havde position: absolute.
-Men når vi har position: absolute har det ikke være muligt for os at centrere knappen når vi gjorde den responsiv.
-På shop.html kan knappen ses uden transform og position: absolut, hvorved det er er responsivt.
-Har du mon et bud på hvorfor dette kan være?----*/
 .cardscontainer a{
-  color: white;
-  background-color: #856e6b;
-  padding: 8px 15px 8px 15px;
-  border-radius: 20px;
-  position: absolute;
-  bottom: 30px;
-  left: 30%;
-  transition: all .2s ease-in-out;
+    color: white;
+    padding: 8px 15px 8px 15px;
+    background-color: #856e6b;
+    border-radius: 20px;
 }
 
-.cardscontainer div:nth-child(2){
-  background-color: #856e6b;
+.cardscontainer-cta{
+    margin-bottom: 20%;
+    transition: all .2s ease-in-out;
 }
 
-.cardscontainer div:nth-child(2) a{
-  background-color: #c49a95;
+#middle-card{
+    background-color: #856e6b;
 }
 
-.cardscontainer a:hover{
-  transform: scale(1.2);
+#middle-card a{
+    background-color: #c49a95;
+}
+
+.cardscontainer-cta:hover{
+    transform: scale(1.2);
 }
 
 
@@ -452,36 +435,17 @@ Har du mon et bud på hvorfor dette kan være?----*/
 
 /*----INSTAGRAM BILLEDEGALLERI----*/
 .instagram{
-  margin: 0px 20px 100px 20px;
+  margin: 0 10% 10% 10%;
 }
 
-.instagram_et, .instagram_to, .instagram_tre{
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
+.instagram-row{
+    display: flex;
+    justify-content: space-between;
 }
 
-.instagram div{
-  width: 410px;
-  height: 330px;
-  margin: 10px;
-  background-color: #eeeee1;
-  position: relative;
-} 
-
-/*----INSTAGRAM BILLEDERÆKKE 1----*/
-.instagram_et > div:first-child{
-  margin-right: 100px;
-}
-
-/*----INSTAGRAM BILLEDERÆKKE 2----*/
-.instagram_to > div{
-  background-color: #eeeee1;
-  position: relative;
-}
-
-.instagram_to > div:nth-child(2){
-  margin-right: 100px;
+#instagram-second-row{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 

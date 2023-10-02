@@ -6,6 +6,11 @@
   list-style: none;
 }
 
+.max-img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /*----NAVIGATIONSBAR----*/
 nav{
   width: 100%;
@@ -261,43 +266,43 @@ body{
 
 
 /*----MENU & TAKEAWAY SEKTIONEN----*/
+.menuogtakeaway-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .menuogtakeaway{
-  display: flex;
-  width: 100%;
-  height: 600px;
-  position: relative;
-  font-family: 'Montserrat', sans-serif; 
-  padding: 130px 40px 50px 40px;
-  margin-bottom: -60px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 10%;
+    padding: 3% 5% 3% 5%;
+
+    border-radius:20px; 
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #929681;
+    color: white;
 }
   
-.menuogtakeaway div{
-  border-radius:20px;
-  position: relative;
-  background-color: #929681;
+.menuogtakeaway-text{
+    width: 65%;
+    padding-top: 2%;
 }
-  
-.menuogtakeaway img{
-  float: right;
-  padding-top: 40px;
-  padding-right: 50px;
+
+.menuogtakeaway-image{
+    width: 350px;
 }
 
 .menuogtakeaway h1{
-  font-size: 45px;
-  color: white;
-  padding-top: 40px;
-  padding-left: 60px;
+    font-size: 45px;
+    padding-bottom: 2%;
 }
    
 .menuogtakeaway p{
-  font-size: 24px;
-  color: white;
-  font-family: 'Zen Kurenaido', sans-serif;
-  line-height: 35px;
-  padding-top: 30px;
-  padding-left: 60px;
-  width: 60%;
+    font-size: 25px;
+    font-family: 'Zen Kurenaido', sans-serif;
+    line-height: 35px;
 }
   
  
@@ -381,8 +386,6 @@ hr{
 
 
 /*----FOOTER----*/
-/*--Vi har givet vores footer en klasse selvom dette ikke er nødvendigt da vi bare kunne bruge child select.
-Men af en eller anden årsag opførte footeren sig underligt når vi gjorde dette. Derfor gav vi den en klasse--*/
 .footer{
   width: 100%;
   display: flex;
